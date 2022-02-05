@@ -1,7 +1,7 @@
 # 100% Eggs
 
 
-![alt text](https://www.spigotmc.org/attachments/eggbanner-png.643035/)
+![alt text](https://i.postimg.cc/rmvb38qZ/eggbanner.png)
 
 
 ## This Is A Simple Plugin That Will Make Chickens Spawn 100% Of The Time From Eggs!
