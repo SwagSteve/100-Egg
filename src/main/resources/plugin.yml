@@ -1,5 +1,6 @@
 name: 100Egg
 version: ${project.version}
-main: me.swagsteve.egg
+main: me.swagsteve.Egg
 api-version: 1.16
-authors: [ SwagSteve ]
+commands:
+  egg-reload:
