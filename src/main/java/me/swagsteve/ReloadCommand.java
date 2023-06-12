@@ -17,14 +17,18 @@ public class ReloadCommand implements CommandExecutor {
 
             Player p = (Player) sender;
 
-            if (p.isOp()) {
+            if (p.isOp() || p.hasPermission("100egg.commands.reload")) {
 
+                //Reload
                 Egg.getInstance().reloadConfig();
-                p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&a&lConfig Successfully Reloaded!"));
-                p.playSound(p.getLocation(), Sound.ENTITY_EXPERIENCE_ORB_PICKUP, SoundCategory.MASTER, 1, 1);
 
+                //Cache new config
+                Egg.egg_percentage = Egg.getInstance().getConfig().getInt("Setup.egg-percentage");
+                Egg.is_adult = Egg.getInstance().getConfig().getBoolean("Setup.is-adult");
+
+                p.sendMessage(ChatColor.translateAlternateColorCodes('&', "[&e100Egg&r] &a&lConfig successfully reloaded!"));
             } else {
-                p.sendMessage("&c&lYou Don't Have Permission To Use This Command!");
+                p.sendMessage(ChatColor.translateAlternateColorCodes('&', "[&e100Egg&r] &c&lYou don't have permission to use this command!"));
             }
         }
         return false;

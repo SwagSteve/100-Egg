@@ -1,3 +1,6 @@
 Setup:
-  # Set Chance For Eggs Spawning Chickens Out Of 100%
-  EggChance-Of-100: 100
+  # Set % chance for eggs spawning chickens
+  egg-percentage: 100
+
+  # Set if spawned chickens are adults
+  is-adult: false
